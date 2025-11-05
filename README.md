@@ -51,6 +51,10 @@ Falsche Pakete wieder deinstallieren / evtl. gar nicht installieren
  - nano rs500reader/do.py
  - python3 read_rs500.py
 
+ - sudo python3 -m venv /python_venv
+ - sudo /python_venv/bin/pip install hidapi
+ - sudo /python_venv/bin/python3 read_rs500.py
+
 
 Probleme hatte ich beim hid-modul, weil python eine Berechtigung gefehlt hat. Geholfen hat:
 sudo nano /etc/udev/rules.d/91-hid.rules <--Nummer ist wichtig
