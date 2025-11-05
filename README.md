@@ -37,6 +37,21 @@ Falsche Pakete wieder deinstallieren / evtl. gar nicht installieren
 
 -> am schluss erst einstecken!
 
+-> install am linux
+
+sudo apt-get install usbutils
+sudo apt install python3
+sudo apt install python3-pip
+sudo pip3 install hidapi
+
+cd home
+nano read_rs500.py
+mkdir rs500reader
+nano rs500reader/reader.py
+nano rs500reader/do.py
+python3 read_rs500.py
+
+
 Probleme hatte ich beim hid-modul, weil python eine Berechtigung gefehlt hat. Geholfen hat:
 sudo nano /etc/udev/rules.d/91-hid.rules <--Nummer ist wichtig
 Dateiinhalt:
